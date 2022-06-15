@@ -1,0 +1,27 @@
+{
+  "name": "swisstools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./scripts/withdraw_reward.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MetEast/SwissTools.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MetEast/SwissTools/issues"
+  },
+  "homepage": "https://github.com/MetEast/SwissTools#readme",
+  "dependencies": {
+    "ipfs-http-client": "55.0.0",
+    "jimp": "^0.16.1",
+    "node-fetch": "^2.0.0",
+    "web3": "^1.7.3"
+  }
+}
