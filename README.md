@@ -1,10 +1,9 @@
-# METEAST TOOLS
+# SWISS TOOLS
 
 ### Introduction
-MetEast tool is made up of such features:
+Swiss tool is made up of such features:
 
-- Mint tool
-- Sell tool
+- Withdraw Reward Tool
 
 
 
@@ -14,21 +13,14 @@ MetEast tool is made up of such features:
 Clone the repository onto your local device, and install all depedencies
 
 ```shell
-$ git clone https://github.com/MetEast/MetTools.git
+$ git clone https://github.com/MetEast/SwissTools.git
 $ npm install
 ```
 
 then, configurate config.js, 
   - put your private key in the network config item
   - set ENVIRONMENT "test" for testnet, "main" for mainnet
-  - update IPFS_UPLOAD_URL, IPFS_NODE_URL, SERVICE_URL, BACKEND_URL according to ENVIRONMENT
-  - configurate products
-    file: supported file extensions
-    category: categories of NFTs in MetEast
-    saleType: "buynow" for fixed price, "auction" for auction
-    sellPrice: default price(minimum price) for sale
-    auctionDays: default auction duration in days 
-  - in order to mint, put source of images in "/src" folder and make mint.json in "/metadata" folder
+  - update METOKEN_MINING_REWARD_CONTRACT_ADDRESS according to ENVIRONMENT
 
 
 ```javascript
@@ -52,33 +44,9 @@ module.exports = {
 
 **Notice**: *put your private key string in the item "accounts"*.
 
-- Generate the list of files in '/src/' folder
-Run the following command in the terminal to generate mint.json file.
+- Withdraw Rewards
+Run the following command in the terminal to withdraw mining rewards.
 
 ```shell
-$ node ./scripts/mint_gen_input.js
+$ node ./scripts/withdraw_reward.js
 ```
-
-- Mint
-Run the following command in the terminal to mint NFTs.
-
-```shell
-$ node ./scripts/mint.js
-```
-
-- Generate the list of unlisted NFTs to '/metadata/sell.json'
-Run the following command in the terminal to generate sell.json file.
-
-```shell
-$ node ./scripts/sell_gen_input.js
-```
-
-- Sell
-Run the following command in the terminal to sell NFTs.
-
-```shell
-$ node ./scripts/sell.js
-```
-
-
-
